@@ -1,0 +1,59 @@
+<ol class="breadcrumb">
+    <li><a ui-sref="app.welcome">首页</a></li>
+    <li><a ui-sref="app.place-list">地点列表</a></li>
+    <li class="active">详情</li>
+</ol>
+
+<div class="row" ng-show="!loaded">
+    <div class="col-sm-12">
+        <i class="loading"></i>
+    </div>
+</div>
+
+<div class="row" ng-show="loaded && item == null">
+    404
+</div>
+
+<div class="form-horizontal" ng-show="loaded && item != null">
+
+    <div class="form-group">
+        <label class="col-sm-1 control-label">编号</label>
+        <div class="col-sm-10">
+            <p class="form-control-static">{{item.id}}</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-1 control-label">地名</label>
+        <div class="col-sm-10">
+            <p class="form-control-static">{{item.name}}</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-1 control-label">经度</label>
+        <div class="col-sm-10">
+            <p class="form-control-static">{{item.longitude}}</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-1 control-label">纬度</label>
+        <div class="col-sm-10">
+            <p class="form-control-static">{{item.latitude}}</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-1 control-label">地点的状态</label>
+        <div class="col-sm-10">
+            <p class="form-control-static">{{item.timeMachineId}}</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-1">
+            <a ui-sref="app.place-update({id: item.id})" class="btn btn-success">编辑</a>
+        </div>
+    </div>
+</div>
