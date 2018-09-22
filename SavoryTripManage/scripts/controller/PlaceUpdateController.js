@@ -11,6 +11,14 @@ function PlaceUpdateController($scope, $state, $stateParams, SavoryTripManageSer
         }
 
         $scope.item = response.item;
+        {
+            for (var i = 0; i < $scope.item.timeMachineId.length; i++) {
+                if ($scope.item.timeMachineId[i].selected) {
+                    $scope.item.time_machine_id_value = $scope.item.timeMachineId[i].timeMachineId;
+                    break;
+                }
+            }
+        }
     }
 
     function place_update_callback(response) {
@@ -32,7 +40,7 @@ function PlaceUpdateController($scope, $state, $stateParams, SavoryTripManageSer
         request.name = $scope.item.name;
         request.longitude = $scope.item.longitude;
         request.latitude = $scope.item.latitude;
-        request.timeMachineId = $scope.item.timeMachineId;
+        request.timeMachineId = $scope.item.time_machine_id_value;
 
         SavoryTripManageService.place_update(request).then(place_update_callback)
     }

@@ -8,6 +8,12 @@ function PlaceCreateController($scope, $state, $stateParams, SavoryTripManageSer
         }
 
         $scope.item = response.item;
+        {
+            if($scope.item.timeMachineId.length > 0)
+            {
+                $scope.item.time_machine_id_value = $scope.item.timeMachineId[0].timeMachineId;
+            }
+        }
     }
 
     function place_create_callback(response) {
@@ -32,7 +38,7 @@ function PlaceCreateController($scope, $state, $stateParams, SavoryTripManageSer
         request.name = $scope.item.name;
         request.longitude = $scope.item.longitude;
         request.latitude = $scope.item.latitude;
-        request.timeMachineId = $scope.item.timeMachineId;
+        request.timeMachineId = $scope.item.time_machine_id_value;
 
         SavoryTripManageService.place_create(request).then(place_create_callback)
     }

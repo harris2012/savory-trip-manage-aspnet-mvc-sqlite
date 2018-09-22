@@ -1,0 +1,31 @@
+<ol class="breadcrumb">
+    <li><a ui-sref="app.welcome">首页</a></li>
+    <li><a ui-sref="app.meta-time-machine-list">地点状态列表</a></li>
+    <li class="active">新增</li>
+</ol>
+
+<form class="form form-horizontal" name="createForm" novalidate>
+
+    <div class="form-group" ng-class="{'has-error':createForm.timeMachineId.$dirty&&createForm.timeMachineId.$error.required}">
+        <label class="col-sm-2 control-label">状态标识</label>
+        <div class="col-sm-2">
+            <input type="number" class="form-control" name="timeMachineId" ng-model="item.timeMachineId" required />
+            <p class="text-danger" ng-show="createForm.timeMachineId.$dirty && createForm.timeMachineId.$error.required">必填</p>
+        </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':createForm.timeMachineName.$dirty&&createForm.timeMachineName.$error.required}">
+        <label class="col-sm-2 control-label">状态名称</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="timeMachineName" ng-model="item.timeMachineName" required />
+            <p class="text-danger" ng-show="createForm.timeMachineName.$dirty && createForm.timeMachineName.$error.required">必填</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            <input type="button" ng-click="confirmCreate()" value="确认新增" class="btn btn-success" />
+        </div>
+    </div>
+
+</form>

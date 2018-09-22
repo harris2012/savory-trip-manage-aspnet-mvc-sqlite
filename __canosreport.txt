@@ -41,6 +41,17 @@
       "DataStatus": 1,
       "CreateTime": "0001-01-01T00:00:00",
       "LastUpdateTime": "0001-01-01T00:00:00"
+    },
+    {
+      "ProjectName": "SavoryTripManage",
+      "SubjectName": "MetaTimeMachine",
+      "DisplayName": "地点状态",
+      "TableName": "meta_time_machine",
+      "Description": "地点状态",
+      "Id": 39,
+      "DataStatus": 1,
+      "CreateTime": "0001-01-01T00:00:00",
+      "LastUpdateTime": "0001-01-01T00:00:00"
     }
   ],
   "PropertyList": [
@@ -68,6 +79,28 @@
     },
     {
       "ProjectName": "SavoryTripManage",
+      "SubjectName": "MetaTimeMachine",
+      "PropertyName": "TimeMachineId",
+      "DisplayName": "状态标识",
+      "ProgramType": "INT",
+      "FieldName": "time_machine_id",
+      "PropertyFrom": "Basic",
+      "IsMultiMeta": false,
+      "MetadataName": null,
+      "Description": "状态标识",
+      "Position": 0,
+      "CreateRequired": true,
+      "UpdateRequired": true,
+      "Pattern": null,
+      "Inputable": true,
+      "Updatable": true,
+      "Id": 135,
+      "DataStatus": 1,
+      "CreateTime": "0001-01-01T00:00:00",
+      "LastUpdateTime": "0001-01-01T00:00:00"
+    },
+    {
+      "ProjectName": "SavoryTripManage",
       "SubjectName": "Place",
       "PropertyName": "Longitude",
       "DisplayName": "经度",
@@ -84,6 +117,28 @@
       "Inputable": true,
       "Updatable": true,
       "Id": 132,
+      "DataStatus": 1,
+      "CreateTime": "0001-01-01T00:00:00",
+      "LastUpdateTime": "0001-01-01T00:00:00"
+    },
+    {
+      "ProjectName": "SavoryTripManage",
+      "SubjectName": "MetaTimeMachine",
+      "PropertyName": "TimeMachineName",
+      "DisplayName": "状态名称",
+      "ProgramType": "STRING",
+      "FieldName": "time_machine_name",
+      "PropertyFrom": "Basic",
+      "IsMultiMeta": false,
+      "MetadataName": null,
+      "Description": "状态名称",
+      "Position": 1,
+      "CreateRequired": true,
+      "UpdateRequired": true,
+      "Pattern": null,
+      "Inputable": true,
+      "Updatable": true,
+      "Id": 136,
       "DataStatus": 1,
       "CreateTime": "0001-01-01T00:00:00",
       "LastUpdateTime": "0001-01-01T00:00:00"
@@ -115,11 +170,11 @@
       "SubjectName": "Place",
       "PropertyName": "TimeMachineId",
       "DisplayName": "地点的状态",
-      "ProgramType": "INT",
+      "ProgramType": "",
       "FieldName": "time_machine_id",
-      "PropertyFrom": "Basic",
+      "PropertyFrom": "Meta",
       "IsMultiMeta": false,
-      "MetadataName": null,
+      "MetadataName": "TheTimeMachine",
       "Description": "地点的状态",
       "Position": 3,
       "CreateRequired": true,
@@ -133,5 +188,18 @@
       "LastUpdateTime": "0001-01-01T00:00:00"
     }
   ],
-  "MetaList": []
+  "MetaList": [
+    {
+      "ProjectName": "SavoryTripManage",
+      "MetadataName": "TheTimeMachine",
+      "MetaKey": "TimeMachineId",
+      "MetaText": "TimeMachineName",
+      "Description": "地点状态",
+      "SubjectName": "MetaTimeMachine",
+      "Id": 9,
+      "DataStatus": 1,
+      "CreateTime": "0001-01-01T00:00:00",
+      "LastUpdateTime": "0001-01-01T00:00:00"
+    }
+  ]
 }

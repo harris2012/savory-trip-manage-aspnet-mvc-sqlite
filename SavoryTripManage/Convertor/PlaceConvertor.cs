@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using SavoryTripManage.Meta;
 using SavoryTripManage.Controllers.Request;
 using SavoryTripManage.Repository.Entity;
 using SavoryTripManage.Vo;
@@ -11,6 +12,18 @@ namespace SavoryTripManage.Convertor
 {
     public class PlaceConvertor : IPlaceConvertor
     {
+
+        private ITheTimeMachineMeta theTimeMachineMeta;
+        private ITheTimeMachineConvertor theTimeMachineConvertor;
+
+        public PlaceConvertor(
+            ITheTimeMachineMeta theTimeMachineMeta,
+            ITheTimeMachineConvertor theTimeMachineConvertor
+        )
+        {
+            this.theTimeMachineMeta = theTimeMachineMeta;
+            this.theTimeMachineConvertor = theTimeMachineConvertor;
+        }
 
         public PlaceEntity toEntity(PlaceCreateRequest request)
         {
@@ -41,6 +54,9 @@ namespace SavoryTripManage.Convertor
         {
             PlaceVo vo = new PlaceVo();
 
+            List<TheTimeMachineEntity> theTimeMachineEntityList = theTimeMachineMeta.GetEntityList();
+            vo.TimeMachineId = theTimeMachineConvertor.getVoList(theTimeMachineEntityList);
+
             return vo;
         }
 
@@ -48,12 +64,18 @@ namespace SavoryTripManage.Convertor
         {
             PlaceVo vo = toVo(entity);
 
+            List<TheTimeMachineEntity> theTimeMachineEntityList = theTimeMachineMeta.GetEntityList();
+            vo.TimeMachineId = theTimeMachineConvertor.getLessVoList(theTimeMachineEntityList, entity.TimeMachineId);
+
             return vo;
         }
 
         public PlaceVo toMoreVo(PlaceEntity entity)
         {
             PlaceVo vo = toVo(entity);
+
+            List<TheTimeMachineEntity> theTimeMachineEntityList = theTimeMachineMeta.GetEntityList();
+            vo.TimeMachineId = theTimeMachineConvertor.getMoreVoList(theTimeMachineEntityList, entity.TimeMachineId);
 
             return vo;
         }
@@ -84,7 +106,6 @@ namespace SavoryTripManage.Convertor
             vo.Name = entity.Name;
             vo.Longitude = entity.Longitude;
             vo.Latitude = entity.Latitude;
-            vo.TimeMachineId = entity.TimeMachineId;
 
             return vo;
         }

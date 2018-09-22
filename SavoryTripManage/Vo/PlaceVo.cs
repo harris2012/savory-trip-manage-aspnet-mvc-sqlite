@@ -22,6 +22,6 @@ namespace SavoryTripManage.Vo
         public double Latitude { get; set; }
 
         [JsonProperty("timeMachineId")]
-        public int? TimeMachineId { get; set; }
+        public List<TheTimeMachineVo> TimeMachineId { get; set; }
     }
 }

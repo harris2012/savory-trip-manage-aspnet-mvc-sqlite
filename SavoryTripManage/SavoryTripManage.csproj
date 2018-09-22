@@ -147,6 +147,14 @@
     <Content Include="scripts\view\view_place_item.html" />
     <Content Include="scripts\view\view_place_create.html" />
     <Content Include="scripts\view\view_place_update.html" />
+    <Content Include="scripts\controller\MetaTimeMachineListController.js" />
+    <Content Include="scripts\controller\MetaTimeMachineItemController.js" />
+    <Content Include="scripts\controller\MetaTimeMachineCreateController.js" />
+    <Content Include="scripts\controller\MetaTimeMachineUpdateController.js" />
+    <Content Include="scripts\view\view_meta_time_machine_list.html" />
+    <Content Include="scripts\view\view_meta_time_machine_item.html" />
+    <Content Include="scripts\view\view_meta_time_machine_create.html" />
+    <Content Include="scripts\view\view_meta_time_machine_update.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutofacConfig.cs" />
@@ -186,6 +194,37 @@
     <Compile Include="Repository\Entity\PlaceEntity.cs" />
     <Compile Include="Repository\IPlaceRepository.cs" />
     <Compile Include="Repository\Sqlite\SqlitePlaceRepository.cs" />
+    <Compile Include="Controllers\MetaTimeMachineController.cs" />
+    <Compile Include="Controllers\Request\MetaTimeMachineCountRequest.cs" />
+    <Compile Include="Controllers\Request\MetaTimeMachineCreateRequest.cs" />
+    <Compile Include="Controllers\Request\MetaTimeMachineEmptyRequest.cs" />
+    <Compile Include="Controllers\Request\MetaTimeMachineEditableRequest.cs" />
+    <Compile Include="Controllers\Request\MetaTimeMachineItemRequest.cs" />
+    <Compile Include="Controllers\Request\MetaTimeMachineItemsRequest.cs" />
+    <Compile Include="Controllers\Request\MetaTimeMachineUpdateRequest.cs" />
+    <Compile Include="Controllers\Response\MetaTimeMachineCountResponse.cs" />
+    <Compile Include="Controllers\Response\MetaTimeMachineCreateResponse.cs" />
+    <Compile Include="Controllers\Response\MetaTimeMachineEmptyResponse.cs" />
+    <Compile Include="Controllers\Response\MetaTimeMachineEditableResponse.cs" />
+    <Compile Include="Controllers\Response\MetaTimeMachineItemResponse.cs" />
+    <Compile Include="Controllers\Response\MetaTimeMachineItemsResponse.cs" />
+    <Compile Include="Controllers\Response\MetaTimeMachineUpdateResponse.cs" />
+    <Compile Include="Vo\MetaTimeMachineVo.cs" />
+    <Compile Include="Convertor\MetaTimeMachineConvertor.cs" />
+    <Compile Include="Convertor\IMetaTimeMachineConvertor.cs" />
+    <Compile Include="Repository\Entity\MetaTimeMachineEntity.cs" />
+    <Compile Include="Repository\IMetaTimeMachineRepository.cs" />
+    <Compile Include="Repository\Sqlite\SqliteMetaTimeMachineRepository.cs" />
+    <Compile Include="Vo\TheTimeMachineVo.cs" />
+    <Compile Include="Repository\Entity\TheTimeMachineEntity.cs" />
+    <Compile Include="Repository\ITheTimeMachineRepository.cs" />
+    <Compile Include="Convertor\TheTimeMachineConvertor.cs" />
+    <Compile Include="Convertor\ITheTimeMachineConvertor.cs" />
+    <Compile Include="Repository\Sqlite\SqliteTheTimeMachineRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Meta\ITheTimeMachineMeta.cs" />
+    <Compile Include="Meta\TheTimeMachineMeta.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />

@@ -75,7 +75,7 @@ namespace SavoryTripManage.Repository.Sqlite
 
             using (var sqliteConn = connectionProvider.GetConnection())
             {
-                sqliteConn.Execute(sql, new { Name = entity.Name, Longitude = entity.Longitude, Latitude = entity.Latitude, TimeMachineId = entity.TimeMachineId });
+                sqliteConn.Execute(sql, new { id = entity.Id, Name = entity.Name, Longitude = entity.Longitude, Latitude = entity.Latitude, TimeMachineId = entity.TimeMachineId });
             }
         }
     }

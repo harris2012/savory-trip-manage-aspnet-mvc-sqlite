@@ -12,6 +12,16 @@ function SavoryTripManageService($resource, $q) {
         place_editable: { method: 'POST', url: 'api/place/editable' },
         place_empty: { method: 'POST', url: 'api/place/empty' },
 
+        meta_time_machine_items: { method: 'POST', url: 'api/meta-time-machine/items' },
+        meta_time_machine_item: { method: 'POST', url: 'api/meta-time-machine/item' },
+        meta_time_machine_count: { method: 'POST', url: 'api/meta-time-machine/count' },
+        meta_time_machine_update: { method: 'POST', url: 'api/meta-time-machine/update' },
+        meta_time_machine_enable: { method: 'POST', url: 'api/meta-time-machine/enable' },
+        meta_time_machine_disable: { method: 'POST', url: 'api/meta-time-machine/disable' },
+        meta_time_machine_create: { method: 'POST', url: 'api/meta-time-machine/create' },
+        meta_time_machine_editable: { method: 'POST', url: 'api/meta-time-machine/editable' },
+        meta_time_machine_empty: { method: 'POST', url: 'api/meta-time-machine/empty' },
+
         user_profile: { method: 'POST', url: 'api/user/profile' }
     });
 
@@ -26,6 +36,16 @@ function SavoryTripManageService($resource, $q) {
         place_create: function (request) { var d = $q.defer(); resource.place_create({}, request, function (result) { d.resolve(result); }, function (result) { d.reject(result); }); return d.promise; },
         place_editable: function (request) { var d = $q.defer(); resource.place_editable({}, request, function (result) { d.resolve(result); }, function (result) { d.reject(result); }); return d.promise; },
         place_empty: function (request) { var d = $q.defer(); resource.place_empty({}, request, function (result) { d.resolve(result); }, function (result) { d.reject(result); }); return d.promise; },
+
+        meta_time_machine_items: function (request) { var d = $q.defer(); resource.meta_time_machine_items({}, request, function (result) { d.resolve(result); }, function (result) { d.reject(result); }); return d.promise; },
+        meta_time_machine_item: function (request) { var d = $q.defer(); resource.meta_time_machine_item({}, request, function (result) { d.resolve(result); }, function (result) { d.reject(result); }); return d.promise; },
+        meta_time_machine_update: function (request) { var d = $q.defer(); resource.meta_time_machine_update({}, request, function (result) { d.resolve(result); }, function (result) { d.reject(result); }); return d.promise; },
+        meta_time_machine_count: function (request) { var d = $q.defer(); resource.meta_time_machine_count({}, request, function (result) { d.resolve(result); }, function (result) { d.reject(result); }); return d.promise; },
+        meta_time_machine_enable: function (request) { var d = $q.defer(); resource.meta_time_machine_enable({}, request, function (result) { d.resolve(result); }, function (result) { d.reject(result); }); return d.promise; },
+        meta_time_machine_disable: function (request) { var d = $q.defer(); resource.meta_time_machine_disable({}, request, function (result) { d.resolve(result); }, function (result) { d.reject(result); }); return d.promise; },
+        meta_time_machine_create: function (request) { var d = $q.defer(); resource.meta_time_machine_create({}, request, function (result) { d.resolve(result); }, function (result) { d.reject(result); }); return d.promise; },
+        meta_time_machine_editable: function (request) { var d = $q.defer(); resource.meta_time_machine_editable({}, request, function (result) { d.resolve(result); }, function (result) { d.reject(result); }); return d.promise; },
+        meta_time_machine_empty: function (request) { var d = $q.defer(); resource.meta_time_machine_empty({}, request, function (result) { d.resolve(result); }, function (result) { d.reject(result); }); return d.promise; },
 
         user_profile: function () { var d = $q.defer(); resource.user_profile({}, function (result) { d.resolve(result); }, function (result) { d.reject(result); }); return d.promise; }
     }

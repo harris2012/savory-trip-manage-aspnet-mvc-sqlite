@@ -1,11 +1,11 @@
 <ol class="breadcrumb">
     <li><a ui-sref="app.welcome">首页</a></li>
-    <li class="active">地点列表</li>
+    <li class="active">地点状态列表</li>
 </ol>
 
 <div class="row form-group">
     <div class="col-sm-12">
-        <a class="btn btn-success" ui-sref="app.place-create">新增</a>
+        <a class="btn btn-success" ui-sref="app.meta-time-machine-create">新增</a>
     </div>
 </div>
 
@@ -23,10 +23,8 @@
     <thead>
         <tr>
             <th>编号</th>
-            <th>地名</th>
-            <th>经度</th>
-            <th>纬度</th>
-            <th>地点的状态</th>
+            <th>状态标识</th>
+            <th>状态名称</th>
             <th>查看</th>
             <th>编辑</th>
         </tr>
@@ -34,14 +32,10 @@
     <tbody>
         <tr ng-repeat="item in items">
             <td>{{item.id}}</td>
-            <td>{{item.name}}</td>
-            <td>{{item.longitude}}</td>
-            <td>{{item.latitude}}</td>
-            <td>
-                <span ng-repeat="x in item.timeMachineId">{{x.timeMachineName}} </span>
-            </td>
-            <td><a ui-sref="app.place-item({id: item.id})">查看</a></td>
-            <td><a ui-sref="app.place-update({id: item.id})">编辑</a></td>
+            <td>{{item.timeMachineId}}</td>
+            <td>{{item.timeMachineName}}</td>
+            <td><a ui-sref="app.meta-time-machine-item({id: item.id})">查看</a></td>
+            <td><a ui-sref="app.meta-time-machine-update({id: item.id})">编辑</a></td>
         </tr>
     </tbody>
 </table>
