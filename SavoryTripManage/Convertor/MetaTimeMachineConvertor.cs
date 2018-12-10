@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SavoryTripManage.Controllers.Request;
 using SavoryTripManage.Repository.Entity;
 using SavoryTripManage.Vo;
+using SavoryTripManage.Utility;
 
 namespace SavoryTripManage.Convertor
 {
@@ -22,7 +23,7 @@ namespace SavoryTripManage.Convertor
             return entity;
         }
 
-        public MetaTimeMachineEntity toEntity(MetaTimeMachineUpdateRequest request)
+        public MetaTimeMachineEntity toEntity(MetaTimeMachineUpdateRequest request, MetaTimeMachineEntity oldEntity)
         {
             MetaTimeMachineEntity entity = new MetaTimeMachineEntity();
 

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -163,7 +163,7 @@ namespace SavoryTripManage.Controllers
                 return response;
             }
 
-            metaTimeMachineRepository.Update(metaTimeMachineConvertor.toEntity(request));
+            metaTimeMachineRepository.Update(metaTimeMachineConvertor.toEntity(request, entity));
 
             theTimeMachineMeta.Refresh();
 

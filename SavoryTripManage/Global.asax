@@ -1,1 +1,1 @@
-<%@ Application Codebehind="Global.asax.cs" Inherits="SavoryTripManage.MvcApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="SavoryTripManage.MvcApplication" Language="C#" %>

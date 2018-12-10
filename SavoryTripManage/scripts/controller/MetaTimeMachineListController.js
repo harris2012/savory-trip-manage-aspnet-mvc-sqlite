@@ -23,7 +23,6 @@ function MetaTimeMachineListController($scope, $state, $stateParams, SavoryTripM
         $scope.totalCount = response.totalCount;
     }
 
-    //分页
     $scope.pageChanged = function () {
 
         $scope.items_loaded = false;
@@ -34,7 +33,7 @@ function MetaTimeMachineListController($scope, $state, $stateParams, SavoryTripM
         request.pageIndex = $scope.currentPage;
 
         SavoryTripManageService.meta_time_machine_items(request).then(meta_time_machine_items_callback);
-    };
+    }
 
     {
         $scope.maxSize = 10;

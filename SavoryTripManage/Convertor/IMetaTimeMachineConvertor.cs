@@ -1,4 +1,4 @@
-using SavoryTripManage.Controllers.Request;
+﻿using SavoryTripManage.Controllers.Request;
 using SavoryTripManage.Repository.Entity;
 using SavoryTripManage.Vo;
 using System;
@@ -19,7 +19,7 @@ namespace SavoryTripManage.Convertor
         /// <summary>
         /// request 转换为 entity
         /// </summary>
-        MetaTimeMachineEntity toEntity(MetaTimeMachineUpdateRequest request);
+        MetaTimeMachineEntity toEntity(MetaTimeMachineUpdateRequest request, MetaTimeMachineEntity oldEntity);
 
         /// <summary>
         /// 获取空 vo

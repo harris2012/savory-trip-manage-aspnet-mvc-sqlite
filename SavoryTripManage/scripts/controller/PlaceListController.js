@@ -23,7 +23,6 @@ function PlaceListController($scope, $state, $stateParams, SavoryTripManageServi
         $scope.totalCount = response.totalCount;
     }
 
-    //分页
     $scope.pageChanged = function () {
 
         $scope.items_loaded = false;
@@ -34,7 +33,7 @@ function PlaceListController($scope, $state, $stateParams, SavoryTripManageServi
         request.pageIndex = $scope.currentPage;
 
         SavoryTripManageService.place_items(request).then(place_items_callback);
-    };
+    }
 
     {
         $scope.maxSize = 10;

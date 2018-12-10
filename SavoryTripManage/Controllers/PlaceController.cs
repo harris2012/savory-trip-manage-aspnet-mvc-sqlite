@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -156,7 +156,7 @@ namespace SavoryTripManage.Controllers
                 return response;
             }
 
-            placeRepository.Update(placeConvertor.toEntity(request));
+            placeRepository.Update(placeConvertor.toEntity(request, entity));
 
             response.Status = 1;
             return response;

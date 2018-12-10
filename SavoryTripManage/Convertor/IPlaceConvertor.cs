@@ -1,4 +1,4 @@
-using SavoryTripManage.Controllers.Request;
+﻿using SavoryTripManage.Controllers.Request;
 using SavoryTripManage.Repository.Entity;
 using SavoryTripManage.Vo;
 using System;
@@ -19,7 +19,7 @@ namespace SavoryTripManage.Convertor
         /// <summary>
         /// request 转换为 entity
         /// </summary>
-        PlaceEntity toEntity(PlaceUpdateRequest request);
+        PlaceEntity toEntity(PlaceUpdateRequest request, PlaceEntity oldEntity);
 
         /// <summary>
         /// 获取空 vo
