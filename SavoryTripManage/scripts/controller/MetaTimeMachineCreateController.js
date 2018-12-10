@@ -1,4 +1,4 @@
-function MetaTimeMachineCreateController($scope, $state, $stateParams, SavoryTripManageService) {
+﻿function MetaTimeMachineCreateController($scope, $state, $stateParams, SavoryTripManageService) {
 
     function meta_time_machine_empty_callback(response) {
 

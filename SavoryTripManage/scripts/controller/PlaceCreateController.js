@@ -1,4 +1,4 @@
-function PlaceCreateController($scope, $state, $stateParams, SavoryTripManageService) {
+﻿function PlaceCreateController($scope, $state, $stateParams, SavoryTripManageService) {
 
     function place_empty_callback(response) {
 

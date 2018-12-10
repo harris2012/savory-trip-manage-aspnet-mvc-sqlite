@@ -1,4 +1,4 @@
-function PlaceListController($scope, $state, $stateParams, SavoryTripManageService) {
+﻿function PlaceListController($scope, $state, $stateParams, SavoryTripManageService) {
 
     function place_items_callback(response) {
 

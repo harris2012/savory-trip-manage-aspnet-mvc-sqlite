@@ -1,4 +1,4 @@
-function MetaTimeMachineListController($scope, $state, $stateParams, SavoryTripManageService) {
+﻿function MetaTimeMachineListController($scope, $state, $stateParams, SavoryTripManageService) {
 
     function meta_time_machine_items_callback(response) {
 

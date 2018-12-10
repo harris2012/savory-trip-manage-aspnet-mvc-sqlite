@@ -1,4 +1,4 @@
-//新建数据库
+﻿//新建数据库
 function MetaTimeMachineUpdateController($scope, $state, $stateParams, SavoryTripManageService) {
 
     $scope.id = $stateParams.id;

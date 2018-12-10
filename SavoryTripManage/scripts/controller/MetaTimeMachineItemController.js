@@ -1,4 +1,4 @@
-function MetaTimeMachineItemController($scope, $state, $stateParams, SavoryTripManageService) {
+﻿function MetaTimeMachineItemController($scope, $state, $stateParams, SavoryTripManageService) {
 
     $scope.id = $stateParams.id;
 

@@ -1,4 +1,4 @@
-function PlaceItemController($scope, $state, $stateParams, SavoryTripManageService) {
+﻿function PlaceItemController($scope, $state, $stateParams, SavoryTripManageService) {
 
     $scope.id = $stateParams.id;
 

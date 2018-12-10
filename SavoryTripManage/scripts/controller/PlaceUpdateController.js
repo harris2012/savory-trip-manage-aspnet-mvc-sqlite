@@ -1,4 +1,4 @@
-//新建数据库
+﻿//新建数据库
 function PlaceUpdateController($scope, $state, $stateParams, SavoryTripManageService) {
 
     $scope.id = $stateParams.id;

@@ -1,4 +1,4 @@
-function SavoryTripManageService($resource, $q) {
+﻿function SavoryTripManageService($resource, $q) {
 
     var resource = $resource('api/search-support', {}, {
 
